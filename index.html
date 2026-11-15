@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kerb studio · websites for roofers & HVAC</title>
+<meta name="description" content="kerb builds websites for roofing and HVAC companies. We build yours first. You only pay if you want it.">
+<meta property="og:title" content="kerb studio">
+<meta property="og:description" content="Your new website is already built. Pay only if you love it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23141414'/><rect x='6' y='21' width='20' height='4' fill='%23ff5a1f'/></svg>">
+<style>
+:root{
+  --paper:#f3efe6; --paper-2:#e9e3d6; --ink:#141414; --ink-2:#4a4740; --line:#d6cfbf;
+  --accent:#ff5a1f; --accent-ink:#141414;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Instrument Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+@media(max-width:600px){.wrap{padding:0 16px}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);border-bottom:1px solid transparent;transition:border-color .2s}
+nav.scrolled{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 26px/1 var(--display);letter-spacing:-.04em;text-decoration:none;display:inline-flex;flex-direction:column;gap:3px}
+.logo i{display:block;height:4px;width:100%;background:var(--accent)}
+.nav-links{display:flex;gap:28px;align-items:center;font-weight:500;font-size:15px}
+.nav-links a{text-decoration:none}
+.nav-links a:not(.btn):hover{color:var(--accent)}
+@media(max-width:700px){.nav-links a:not(.btn){display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--accent);color:var(--accent-ink)}
+.btn:active{transform:scale(.97)}
+.btn.small{padding:10px 18px}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* hero */
+.hero{padding-top:72px;padding-bottom:96px;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:40px;padding-bottom:72px;gap:44px}.mock{transform:none;box-shadow:6px 6px 0 var(--ink)}.plan.hot{box-shadow:6px 6px 0 var(--ink)}}
+h1{font:800 clamp(44px,6.6vw,88px)/.98 var(--display);letter-spacing:-.035em}
+h1 .mark{position:relative;white-space:nowrap;z-index:0}
+h1 .mark::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.04em;height:.16em;background:var(--accent);z-index:-1;transform-origin:left;animation:draw .9s 1.6s cubic-bezier(.7,0,.2,1) both}
+@keyframes draw{from{transform:scaleX(0)}}
+.lede{font-size:clamp(18px,1.6vw,21px);color:var(--ink-2);max-width:30em;margin:28px 0 36px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.note{font-size:14px;color:var(--ink-2);margin-top:18px}
+
+/* browser mock that builds itself */
+.mock{background:#fff;border:1.5px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:10px 10px 0 var(--ink);transform:rotate(1.2deg)}
+.mock-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1.5px solid var(--ink);background:var(--paper-2)}
+.mock-bar span{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.url{margin-left:10px;flex:1;background:#fff;border-radius:6px;padding:4px 10px;font-size:12px;color:var(--ink-2);font-family:ui-monospace,monospace;overflow:hidden;white-space:nowrap}
+.url b{color:var(--ink);font-weight:600}
+.site{position:relative;aspect-ratio:4/3.4;overflow:hidden}
+.s-hero{position:absolute;inset:0 0 38%;background:linear-gradient(160deg,#21313f,#0f1a23);padding:7% 7%;color:#fff}
+.s-hero::before{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:
+  repeating-linear-gradient(135deg,#2b3d4d 0 14px,#24364a 14px 28px);clip-path:polygon(0 60%,30% 10%,60% 55%,100% 0,100% 100%,0 100%);opacity:.9}
+.s-top{position:relative;display:flex;justify-content:space-between;font:700 11px var(--body);letter-spacing:.02em}
+.s-top em{font-style:normal;background:var(--accent);color:#141414;padding:3px 8px;border-radius:4px}
+.s-h{position:relative;font:800 clamp(18px,2.5vw,28px)/1.02 var(--display);letter-spacing:-.03em;margin-top:9%;max-width:11em}
+.s-sub{position:relative;font-size:11px;opacity:.75;margin-top:8px}
+.s-cta{position:relative;display:inline-block;margin-top:12px;background:#fff;color:#141414;font:700 11px var(--body);padding:7px 12px;border-radius:5px}
+.s-body{position:absolute;inset:62% 0 0;padding:5% 7%;display:grid;grid-template-columns:repeat(3,1fr);gap:4%}
+.s-card{border-radius:7px;background:var(--paper);padding:10px}
+.s-card i{display:block;width:22px;height:22px;border-radius:5px;background:var(--accent);margin-bottom:8px}
+.s-card b{display:block;font:700 11px var(--body)}
+.s-card u{display:block;text-decoration:none;height:5px;background:var(--line);border-radius:3px;margin-top:6px}
+.s-stars{position:absolute;right:6%;top:40%;background:#fff;color:#141414;border-radius:8px;padding:8px 11px;font:700 11px var(--body);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.s-stars span{color:var(--accent)}
+/* build-in sequence */
+.b{opacity:0;transform:translateY(14px);animation:in .6s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes in{to{opacity:1;transform:none}}
+.d1{animation-delay:.3s}.d2{animation-delay:.6s}.d3{animation-delay:.85s}.d4{animation-delay:1.05s}.d5{animation-delay:1.3s}.d6{animation-delay:1.45s}.d7{animation-delay:1.6s}.d8{animation-delay:1.9s}
+@media(prefers-reduced-motion:reduce){.b,h1 .mark::after{animation:none;opacity:1;transform:none}}
+
+/* sections */
+section{padding:104px 0;border-top:1px solid var(--line)}
+@media(max-width:600px){section{padding:72px 0}}
+h2{font:800 clamp(34px,4.6vw,60px)/1 var(--display);letter-spacing:-.04em;max-width:14em}
+.sec-lede{color:var(--ink-2);font-size:19px;max-width:34em;margin-top:18px}
+
+.steps{margin-top:56px;border-top:1.5px solid var(--ink)}
+.step{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;padding:34px 0;border-bottom:1px solid var(--line)}
+.step h3{font:700 clamp(24px,2.4vw,32px)/1.1 var(--display);letter-spacing:-.03em}
+.step p{color:var(--ink-2);font-size:18px}
+@media(max-width:700px){.step{grid-template-columns:1fr;gap:10px;padding:26px 0}}
+
+.dark{background:var(--ink);color:var(--paper);border:0}
+.dark .sec-lede,.dark .muted{color:#b9b3a6}
+.included{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;margin-top:52px}
+.included li{list-style:none;padding:20px 0;border-bottom:1px solid #2e2c28;display:flex;gap:16px;font-size:18px}
+.included li::before{content:"";flex:none;width:10px;height:10px;margin-top:9px;background:var(--accent)}
+@media(max-width:700px){.included{grid-template-columns:1fr}}
+
+.price{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+@media(max-width:800px){.price{grid-template-columns:1fr}}
+.plan{border:1.5px solid var(--ink);border-radius:18px;padding:34px;background:var(--paper)}
+.plan.hot{background:var(--accent);box-shadow:8px 8px 0 var(--ink)}
+.plan h3{font:700 20px var(--display)}
+.amt{font:800 clamp(52px,6vw,76px)/1 var(--display);letter-spacing:-.05em;margin:18px 0 6px}
+.amt small{font-size:20px;letter-spacing:0;font-weight:600}
+.plan p{font-size:16px}
+.plan ul{margin:22px 0 0;list-style:none}
+.plan li{padding:10px 0;border-top:1px solid color-mix(in srgb,var(--ink) 18%,transparent);font-size:16px}
+
+.founder{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
+@media(max-width:800px){.founder{grid-template-columns:1fr;gap:24px}}
+.founder p{font-size:20px;line-height:1.5;margin-bottom:18px}
+.sig{font:700 22px var(--display);margin-top:8px}
+
+details{border-bottom:1px solid var(--line);padding:24px 0}
+details:first-of-type{border-top:1.5px solid var(--ink);margin-top:44px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font:700 clamp(19px,1.8vw,23px)/1.25 var(--display);letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:500;transition:transform .2s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--ink-2);margin-top:12px;max-width:44em;font-size:17px}
+
+.final{text-align:left}
+.final h2{font-size:clamp(44px,7vw,104px);max-width:none}
+footer{padding:40px 0 48px;border-top:1px solid #2e2c28;background:var(--ink);color:#b9b3a6;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .logo{color:var(--paper);font-size:22px}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#">kerb<i></i></a>
+  <div class="nav-links">
+    <a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    <a class="btn small" href="mailto:hey@kerbstudio.me?subject=Build%20my%20site">Get your site</a>
+  </div>
+</div></nav>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1>Your new website is <span class="mark">already built.</span></h1>
+    <p class="lede">kerb makes websites for roofing and HVAC companies. We build yours first, from your real business details, then send you the link. Love it? It's yours. Don't? You owe nothing.</p>
+    <div class="cta-row">
+      <a class="btn" href="mailto:hey@kerbstudio.me?subject=Build%20my%20site&body=Business%20name%3A%0ACity%3A%0AWebsite%20(if%20any)%3A">Build mine free →</a>
+      <a class="btn ghost" href="#how">How it works</a>
+    </div>
+    <p class="note">Live in 48 hours. No upfront payment. No contracts.</p>
+  </div>
+
+  <div class="mock" aria-label="Example of a roofing company website">
+    <div class="mock-bar"><span></span><span></span><span></span><div class="url">https://<b>yourcompany</b>.com</div></div>
+    <div class="site">
+      <div class="s-hero b d1">
+        <div class="s-top b d2"><span>SUMMIT ROOFING</span><em>Call now</em></div>
+        <div class="s-h b d3">Roof repairs done right, the first time.</div>
+        <div class="s-sub b d4">Free inspections · Licensed & insured</div>
+        <div class="s-cta b d5">Get a free quote</div>
+      </div>
+      <div class="s-stars b d8">Your Google reviews <span>★★★★★</span></div>
+      <div class="s-body">
+        <div class="s-card b d6"><i></i><b>Repairs</b><u></u><u style="width:70%"></u></div>
+        <div class="s-card b d7"><i></i><b>Replacement</b><u></u><u style="width:60%"></u></div>
+        <div class="s-card b d7"><i></i><b>Storm damage</b><u></u><u style="width:75%"></u></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="how"><div class="wrap">
+  <h2>We do the work before you spend a cent.</h2>
+  <p class="sec-lede">Most web designers want a deposit, a meeting and a questionnaire. We'd rather show you.</p>
+  <div class="steps">
+    <div class="step"><h3>We build it</h3><p>We use what's already public about your business: services, service area, reviews and photos. Then we design a fast, mobile-first site around it.</p></div>
+    <div class="step"><h3>You look at it</h3><p>You get a private link to your finished site. Tap through it on your phone. Ask for any changes you want, as many as it takes.</p></div>
+    <div class="step"><h3>You decide</h3><p>If you want it, we connect it to your domain and it goes live within 48 hours. If you don't, we take it down. No hard feelings, no invoice.</p></div>
+  </div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+  <h2>Built to make your phone ring.</h2>
+  <p class="sec-lede">A good-looking site is the start. Every kerb site is set up to turn visitors into calls and quote requests.</p>
+  <ul class="included">
+    <li>Tap-to-call button on every screen</li>
+    <li>Quote request form sent straight to your email</li>
+    <li>Fast on phones, where most of your customers look</li>
+    <li>Your real Google reviews, front and centre</li>
+    <li>Service area pages so locals find you on Google</li>
+    <li>Set up for Google search from day one</li>
+    <li>Secure (https) and hosted for you</li>
+    <li>Edits handled by us. Just send a text or email</li>
+  </ul>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2>One simple price.</h2>
+  <p class="sec-lede">You only pay once you've seen your site and want it.</p>
+  <div class="price">
+    <div class="plan hot">
+      <h3>Your website</h3>
+      <div class="amt">$690<small> one-time</small></div>
+      <p>Everything to launch, built and approved before you pay.</p>
+      <ul><li>Full custom site, up to 6 pages</li><li>Unlimited changes before launch</li><li>Connected to your domain</li><li>Live within 48 hours of approval</li></ul>
+    </div>
+    <div class="plan">
+      <h3>Care plan</h3>
+      <div class="amt">$49<small> / month</small></div>
+      <p>Optional. We keep everything running so you don't have to think about it.</p>
+      <ul><li>Hosting, security and backups</li><li>Unlimited small edits</li><li>New photos and reviews added</li><li>Cancel any time</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap founder">
+  <h2>A small studio, on purpose.</h2>
+  <div>
+    <p>I'm Asharib. I started kerb because the best tradespeople I came across often had the worst websites, or none at all. Their work was great. Their site was costing them jobs.</p>
+    <p>kerb stays small so you always deal with the person who builds your site. You get fast replies and no account managers.</p>
+    <div class="sig">Asharib, founder</div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <details><summary>Do I really pay nothing until I see the site?</summary><p>Yes. We build it first and send you a link. You only get an invoice if you decide you want it live.</p></details>
+  <details><summary>I already have a website. Can you still help?</summary><p>Yes. Most of our sites replace an older one. We'll build the new version alongside it, and you can compare them side by side before switching.</p></details>
+  <details><summary>Do I need to buy a domain or hosting?</summary><p>If you already have a domain, we'll use it. If not, we'll help you pick one. Hosting is included.</p></details>
+  <details><summary>Who owns the site?</summary><p>You do. If you ever leave, we'll hand over everything.</p></details>
+  <details><summary>How do I pay?</summary><p>By card or bank transfer through a secure invoice, once you've approved your site.</p></details>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Let's build yours.</h2>
+  <p class="sec-lede">Send us your business name and city. We'll do the rest and send you a link.</p>
+  <div class="cta-row" style="margin-top:32px">
+    <a class="btn" href="mailto:hey@kerbstudio.me?subject=Build%20my%20site&body=Business%20name%3A%0ACity%3A%0AWebsite%20(if%20any)%3A">hey@kerbstudio.me →</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <a class="logo" href="#">kerb<i></i></a>
+  <span>Websites for roofing & HVAC companies · © <span id="y"></span> kerb studio</span>
+</div></footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const n=document.getElementById('nav');addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>8),{passive:true});
+</script>
+</body>
+</html>
